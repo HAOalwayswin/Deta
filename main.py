@@ -2,9 +2,13 @@ import pandas as pd
 from deta import Deta
 import bcrypt
 import streamlit as st
+import os
 
-deta = Deta(deta_key)
-deta1= Deta(deta1_key)
+
+DETA_PROJECT_KEY1 = os.getenv('deta_key')
+DETA_PROJECT_KEY2 = os.getenv('deta1_key')
+deta = Deta(DETA_PROJECT_KEY1)
+deta1= Deta(DETA_PROJECT_KEY2)
 db = deta.Base("database")
 db1 = deta1.Base("posts")
 post_db=db1
