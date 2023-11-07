@@ -5,10 +5,10 @@ import streamlit as st
 import os
 
 
-DETA_PROJECT_KEY1 = os.getenv('deta_key')
-DETA_PROJECT_KEY2 = os.getenv('deta1_key')
-deta = Deta(DETA_PROJECT_KEY1)
-deta1= Deta(DETA_PROJECT_KEY2)
+deta_key = os.getenv('DETA_PROJECT_KEY')
+deta1_key = os.getenv('DETA1_PROJECT_KEY')
+deta = Deta(deta_key)
+deta1= Deta(deta1_key)
 db = deta.Base("database")
 db1 = deta1.Base("posts")
 post_db=db1
