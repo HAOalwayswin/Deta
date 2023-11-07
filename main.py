@@ -3,6 +3,13 @@ from deta import Deta
 import bcrypt
 import streamlit as st
 
+deta = Deta(deta_key)
+deta1= Deta(deta1_key)
+db = deta.Base("database")
+db1 = deta1.Base("posts")
+post_db=db1
+
+
 st.set_page_config(
     page_title='Deta DB 활용한 로그인',
     page_icon='🧊',
