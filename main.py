@@ -11,7 +11,7 @@ deta = Deta(deta_key)
 deta1= Deta(deta1_key)
 db = deta.Base("database")
 db1 = deta1.Base("posts")
-post_db=db1
+posts_db=db1
 
 
 st.set_page_config(
